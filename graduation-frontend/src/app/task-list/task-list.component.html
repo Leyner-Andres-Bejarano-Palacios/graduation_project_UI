@@ -1,0 +1,17 @@
+<h2> Tasks List</h2>
+<table class = "table table-striped">
+    <thead>
+        <tr>
+            <th> task kName</th>
+            <th> priority </th>
+            <th> id</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let task of tasks" >
+            <td> {{ task.taskName }} </td>
+            <td> {{ task.priority }} </td>
+            <td> {{ task.id }} </td>
+        </tr>
+    </tbody>
+</table>

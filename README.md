@@ -12,11 +12,7 @@ Project created as a frotend adding docker to the angular guide project to make 
     1. execute the command "docker pull trion/ng-cli-karma"
     2. just for information, you can omit this, this is the source of the [image](https://hub.docker.com/r/trion/ng-cli-karma).
 
-3. Something particular that we will do with this image is mount a docker [volume](https://docs.docker.com/storage/volumes/) using a folder from our local machine, pwd in the command below is a bash command to print our current location.
-
-In our case the project name will be graduation-frontend.
-
-The third command "ng serve" will get the angular app up and running
+3. Something particular that we will do with this image is mount a docker [volume](https://docs.docker.com/storage/volumes/) using a folder from our local machine, pwd in the command below is a bash command to print our current location.In our case the project name will be graduation-frontend. The third command "ng serve" will get the angular app up and running
 
     1. docker run -u $(id -u) --rm -v "$PWD":/app trion/ng-cli-karma ng new  graduation-frontendcd 
 
@@ -30,5 +26,15 @@ The third command "ng serve" will get the angular app up and running
 
 
 2. [min 52:15](https://youtu.be/G46fjVzQ7BQ?t=3135) Adding bootstrap to the project, I will do it in the first way
+
+3. [min 52:15](https://youtu.be/G46fjVzQ7BQ?t=3135) Creating the task typescript class 
+    1. I thought ng g class was a mistake, but no, "ng g class" is another way of saying "ng generate class" [reference](https://angular.io/cli/generate)
+    2. docker run -u $(id -u) --rm -v "$PWD":/app trion/ng-cli-karma ng g class task
+
+4. [min 1:01:01](https://youtu.be/G46fjVzQ7BQ?t=3135) Creating the task-list component
+    1. docker run -u $(id -u) --rm -v "$PWD":/app trion/ng-cli-karma ng g c task-list
+
+5. 
+
 
 
