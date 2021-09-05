@@ -18,7 +18,7 @@ Project created as a frotend adding docker to the angular guide project to make 
 
     2. cd graduation-frontendcd
 
-    3. docker run -p 4200:4200 -u $(id -u) --rm -v "$PWD":/app trion/ng-cli-karma ng serve --host 0.0.0.0
+    3. docker run -p 4200:4200 --network graduation_network --name graduation-frontend -u $(id -u) --rm -v "$PWD":/app trion/ng-cli-karma ng serve --host 0.0.0.0
 
 ## how we develop(ed) the system
 
@@ -38,5 +38,6 @@ Project created as a frotend adding docker to the angular guide project to make 
     1. docker run -u $(id -u) --rm -v "$PWD":/app trion/ng-cli-karma ng g s task
 
 6. [min 1:23:01](https://youtu.be/G46fjVzQ7BQ?t=3135) Getting data from backend
-    1. In our case the data doesn't come from a database, instead it comes from a data structure, so let's do that righ now in our backend
+    1. the part of getting data from database we will do it for the analitycal part of the project
+    2. so for getting data from the backend, I will need to put a tag in the docker image and put it in the graduation_network
 

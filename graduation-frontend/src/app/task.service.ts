@@ -8,7 +8,7 @@ import { Task } from './task';
 })
 export class TaskService {
 
-  private baseURL = "http://localhost:8080/api/v1/task";
+  private baseURL = "http://localhost:8080/api/v1/tasks";
 
   constructor(private httpClient: HttpClient) { }
 

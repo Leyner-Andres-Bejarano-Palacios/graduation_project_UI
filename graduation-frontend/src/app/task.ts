@@ -1,10 +1,14 @@
 export class Task {
     id: number;
-    requestId: number;
-    taskName: string;
-    description: string;
-    priority: number;
-    isExecuted: number;
-    isRetried: number;
-    isFailed: number;
+	executionId: string;
+	taskName: string;
+	priority: number;
+	timeOfSchedule: string;
+	timeOfExecution: string;
+	timeOfEnding: string;
+	endOk: number;
+	machineLog: string;
+    numRetries: number;
+	machineDescription: string;
+	isTest: number;
 }
