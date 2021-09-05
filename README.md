@@ -34,7 +34,9 @@ Project created as a frotend adding docker to the angular guide project to make 
 4. [min 1:01:01](https://youtu.be/G46fjVzQ7BQ?t=3135) Creating the task-list component
     1. docker run -u $(id -u) --rm -v "$PWD":/app trion/ng-cli-karma ng g c task-list
 
-5. 
+5. [min 1:14:01](https://youtu.be/G46fjVzQ7BQ?t=3135) Creating the task-list component
+    1. docker run -u $(id -u) --rm -v "$PWD":/app trion/ng-cli-karma ng g s task
 
-
+6. [min 1:23:01](https://youtu.be/G46fjVzQ7BQ?t=3135) Getting data from backend
+    1. In our case the data doesn't come from a database, instead it comes from a data structure, so let's do that righ now in our backend
 

@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Task } from '../task';
+import { TaskService } from '../task.service'
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-task-list',
@@ -10,30 +12,17 @@ export class TaskListComponent implements OnInit {
 
   tasks : Task[];
 
-  constructor() { }
+  constructor(private taskService: TaskService,
+    private router: Router) { }
 
-  ngOnInit(): void {
-    this.tasks = [{
-      "id":1,
-      "requestId":1,
-      "taskName":"tarea 1",
-      "description":"primera descripcion",
-      "priority":1,
-      "isExecuted":1,
-      "isRetried":1,
-      "isFailed":1
+    ngOnInit(): void {
+      this.getTasks();
+    }
 
-    },
-    {
-      "id":2,
-      "requestId":2,
-      "taskName":"tarea 2",
-      "description":"segunda descripcion",
-      "priority":2,
-      "isExecuted":1,
-      "isRetried":1,
-      "isFailed":1
-    }];
-  }
+    private getTasks(){
+      this.taskService.getTaskList().subscribe(data => {
+        this.tasks = data;
+      });
+    }
 
 }
