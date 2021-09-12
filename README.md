@@ -28,16 +28,21 @@ Project created as a frotend adding docker to the angular guide project to make 
 2. [min 52:15](https://youtu.be/G46fjVzQ7BQ?t=3135) Adding bootstrap to the project, I will do it in the first way
 
 3. [min 52:15](https://youtu.be/G46fjVzQ7BQ?t=3135) Creating the task typescript class 
-    1. I thought ng g class was a mistake, but no, "ng g class" is another way of saying "ng generate class" [reference](https://angular.io/cli/generate)
-    2. docker run -u $(id -u) --rm -v "$PWD":/app trion/ng-cli-karma ng g class task
+    1.  I thought ng g class was a mistake, but no, "ng g class" is another way of saying "ng generate class" [reference](https://angular.io/cli/generate)
+    2.  docker run -u $(id -u) --rm -v "$PWD":/app trion/ng-cli-karma ng g class task
 
 4. [min 1:01:01](https://youtu.be/G46fjVzQ7BQ?t=3135) Creating the task-list component
-    1. docker run -u $(id -u) --rm -v "$PWD":/app trion/ng-cli-karma ng g c task-list
+    1.  docker run -u $(id -u) --rm -v "$PWD":/app trion/ng-cli-karma ng g c task-list
 
 5. [min 1:14:01](https://youtu.be/G46fjVzQ7BQ?t=3135) Creating the task-list component
-    1. docker run -u $(id -u) --rm -v "$PWD":/app trion/ng-cli-karma ng g s task
+    1.  docker run -u $(id -u) --rm -v "$PWD":/app trion/ng-cli-karma ng g s task
 
 6. [min 1:23:01](https://youtu.be/G46fjVzQ7BQ?t=3135) Getting data from backend
-    1. the part of getting data from database we will do it for the analitycal part of the project
-    2. so for getting data from the backend, I will need to put a tag in the docker image and put it in the graduation_network
+    1.  the part of getting data from database we will do it for the analitycal part of the project
+    2.  so for getting data from the backend, I will need to put a tag in the docker image and put it in the graduation_network
+
+7. [min 1:25:01](https://youtu.be/G46fjVzQ7BQ?t=3135) looks like I will need to have a different angular component for routing
+    1.  according to [documentation](https://angular.io/tutorial/toh-pt5).
+    2.  execute docker run -u $(id -u) --rm -v "$PWD":/app trion/ng-cli-karma ng generate module app-routing --flat --module=app
+    3.  The rest of the modifications can be found in the same commit where these changes where added
 
