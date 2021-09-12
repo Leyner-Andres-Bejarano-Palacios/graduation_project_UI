@@ -12,12 +12,25 @@ export class TaskService {
 
   constructor(private httpClient: HttpClient) { }
 
-  getTaskList(): Observable<Task[]>{
+  getTasksList(): Observable<Task[]>{
     return this.httpClient.get<Task[]>(`${this.baseURL}`);
   }
 
   createTask(task: Task): Observable<Object>{
     return this.httpClient.post(`${this.baseURL}`, task);
+  }
+
+
+  getTaskById(id: number): Observable<Task>{
+    return this.httpClient.get<Task>(`${this.baseURL}/${id}`);
+  }
+
+  updateTask(id: number, task: Task): Observable<Object>{
+    return this.httpClient.put(`${this.baseURL}/${id}`, task);
+  }
+
+  deleteTask(id: number): Observable<Object>{
+    return this.httpClient.delete(`${this.baseURL}/${id}`);
   }
 
 }
