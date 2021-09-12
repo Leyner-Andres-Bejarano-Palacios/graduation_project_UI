@@ -46,3 +46,7 @@ Project created as a frotend adding docker to the angular guide project to make 
     2.  execute docker run -u $(id -u) --rm -v "$PWD":/app trion/ng-cli-karma ng generate module app-routing --flat --module=app
     3.  The rest of the modifications can be found in the same commit where these changes where added
 
+8. [min 1:46:01](https://youtu.be/G46fjVzQ7BQ?t=3135) Adding the create-task component, including the data-biding concept.
+    1.  creating component
+    2.  docker run -u $(id -u) --rm -v "$PWD":/app trion/ng-cli-karma ng g c create-task
+
