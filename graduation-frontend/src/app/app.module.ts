@@ -7,7 +7,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { CreateTaskComponent } from './create-task/create-task.component';
 import { FormsModule} from '@angular/forms';
 import { UpdateTaskComponent } from './update-task/update-task.component';
-import { TaskDetailsComponent } from './task-detail/task-detail.component';
+import { TaskDetailComponent } from './task-detail/task-detail.component';
+import { TaskmapListComponent } from './taskmap-list/taskmap-list.component';
 
 
 
@@ -17,7 +18,8 @@ import { TaskDetailsComponent } from './task-detail/task-detail.component';
     TaskListComponent,
     CreateTaskComponent,
     UpdateTaskComponent,
-    TaskDetailsComponent,
+    TaskDetailComponent,
+    TaskmapListComponent,
   ],
   imports: [
     BrowserModule,

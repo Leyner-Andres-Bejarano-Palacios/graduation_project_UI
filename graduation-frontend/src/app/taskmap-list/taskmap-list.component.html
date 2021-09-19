@@ -1,0 +1,15 @@
+<h2> Tasks Map List</h2>
+<table class = "table table-striped">
+    <thead>
+        <tr>
+            <th> priority </th>
+            <th> task name </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let task of tasks | keyvalue" >
+            <td> {{ task.value.machineLog }} </td>
+            <td> {{ task.key }} </td>
+        </tr>
+    </tbody>
+</table>

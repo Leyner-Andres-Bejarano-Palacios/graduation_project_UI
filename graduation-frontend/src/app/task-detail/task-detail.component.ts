@@ -4,11 +4,11 @@ import { ActivatedRoute } from '@angular/router';
 import { TaskService } from '../task.service';
 
 @Component({
-  selector: 'app-employee-details',
-  templateUrl: './employee-details.component.html',
-  styleUrls: ['./employee-details.component.css']
+  selector: 'app-task-detail',
+  templateUrl: './task-detail.component.html',
+  styleUrls: ['./task-detail.component.css']
 })
-export class TaskDetailsComponent implements OnInit {
+export class TaskDetailComponent implements OnInit {
 
   id: number
   task: Task
