@@ -55,3 +55,5 @@ Project created as a frotend adding docker to the angular guide project to make 
 1. first I want to see what happen if I return a hashmap in postman
 2. now let-s see if I can make a list out of that json-like json
     1.  docker run -u $(id -u) --rm -v "$PWD":/app trion/ng-cli-karma ng g c taskmap-list
+
+# unittesting the frontend
