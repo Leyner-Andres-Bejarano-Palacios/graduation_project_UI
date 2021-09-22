@@ -57,3 +57,7 @@ Project created as a frotend adding docker to the angular guide project to make 
     1.  docker run -u $(id -u) --rm -v "$PWD":/app trion/ng-cli-karma ng g c taskmap-list
 
 # unittesting the frontend
+
+1. initially executing unit-test
+    1.  [guide](https://www.youtube.com/watch?v=1mgB-aCXG-k)
+    2.   docker run -p 9876:9876 --network graduation_network --name graduation-frontend -u $(id -u) --rm -v "$PWD":/app trion/ng-cli-karma ng test
