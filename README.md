@@ -61,3 +61,21 @@ Project created as a frotend adding docker to the angular guide project to make 
 1. initially executing unit-test
     1.  [guide](https://www.youtube.com/watch?v=1mgB-aCXG-k)
     2.   docker run -p 9876:9876 --network graduation_network --name graduation-frontend -u $(id -u) --rm -v "$PWD":/app trion/ng-cli-karma ng test
+
+2. Analizing angular project using sonarQueue
+    1.  [guide](https://www.youtube.com/watch?v=3dLVHViflys)
+    2.  using sonar to analize a project like angular, without [maven](https://github.com/newtmitch/docker-sonar-scanner)
+    3.  docker run --name sonarqube-non-maven \
+    -p 9000:9000 \
+    --rm -v "$PWD":/app \
+    -v "$(pwd)/sonarqube_data":/opt/sonarqube/data \
+    -v "$(pwd)/sonarqube_extensions":/opt/sonarqube/extensions \
+    -v "$(pwd)/sonarqube_logs":/opt/sonarqube/logs \
+    --network graduation_network \
+    -d newtmitch/sonar-scanner
+
+3. Code coverage of angular project
+    1.  [guide](https://www.youtube.com/watch?v=fbRF2wVKbvM)
+    2.  
+docker run --name sonarqube-non-maven -d newtmitch/sonar-scanner
+    99.  ./app/springboot-backend/mvnw  sonar:sonar -Dsonar.host.url=http://sonarqube:9000   -Dsonar.login=a5fd5b48e4e44e507d6068ee576b5bf82d94c207
