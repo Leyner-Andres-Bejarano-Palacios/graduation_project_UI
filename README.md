@@ -65,17 +65,17 @@ Project created as a frotend adding docker to the angular guide project to make 
 2. Analizing angular project using sonarQueue
     1.  [guide](https://www.youtube.com/watch?v=3dLVHViflys)
     2.  using sonar to analize a project like angular, without [maven](https://github.com/newtmitch/docker-sonar-scanner)
-    3.  docker run --name sonarqube-non-maven \
-    -p 9000:9000 \
-    --rm -v "$PWD":/app \
-    -v "$(pwd)/sonarqube_data":/opt/sonarqube/data \
-    -v "$(pwd)/sonarqube_extensions":/opt/sonarqube/extensions \
-    -v "$(pwd)/sonarqube_logs":/opt/sonarqube/logs \
-    --network graduation_network \
-    -d newtmitch/sonar-scanner
+    3.  docker run --rm -ti -v $PWD:/usr/src --network graduation_network --link sonarqube newtmitch/sonar-scanner \
+    sonar-scanner \
+    -Dsonar.host.url=http://sonarqube:9000 \
+    -Dsonar.login=6792eb48e8f89f43168abb332df99a140994e574 \
+    -Dsonar.projectKey=angular_graduation_frontend \
+    -Dsonar.projectVersion=1 \
+    -Dsonar.projectBaseDir=/usr/src \
+    -Dsonar.sources=.
 
 3. Code coverage of angular project
     1.  [guide](https://www.youtube.com/watch?v=fbRF2wVKbvM)
     2.  
-docker run --name sonarqube-non-maven -d newtmitch/sonar-scanner
-    99.  ./app/springboot-backend/mvnw  sonar:sonar -Dsonar.host.url=http://sonarqube:9000   -Dsonar.login=a5fd5b48e4e44e507d6068ee576b5bf82d94c207
+
+
