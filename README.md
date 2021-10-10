@@ -76,6 +76,17 @@ Project created as a frotend adding docker to the angular guide project to make 
 
 3. Code coverage of angular project
     1.  [guide](https://www.youtube.com/watch?v=fbRF2wVKbvM)
-    2.  
 
+# TROUBLE-SHOOTING
+
+1. Error: ENOSPC: System limit for number of file watchers reached, watch
+    1.  https://stackoverflow.com/questions/55763428/react-native-error-enospc-system-limit-for-number-of-file-watchers-reached
+
+# TO-FO
+
+1. test
+    1.  min 13 const has the value that they are suppose to have [reference](https://youtu.be/1mgB-aCXG-k?t=818)
+    2.  min 14 testing the functions
+    3.  min 18 sif they are callin certain method using the spy, he even mention calling an api, calling databases, dannmmm thats amazing)
+    4.  avoid certain libraries to get into PROD (because test is for local enviroment and deployment pipeline)
 

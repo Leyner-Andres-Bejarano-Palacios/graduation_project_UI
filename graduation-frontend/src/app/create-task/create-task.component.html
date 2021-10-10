@@ -15,7 +15,11 @@
                 [(ngModel)] = "task.priority" name = "priority">
         </div>
     
-
+        <div class="form-group">
+            <label> URL</label>
+            <input type="text" class ="form-control" id = "url"
+                [(ngModel)] = "task.requestedUrl" name = "requestedUrl">
+        </div>
     
         <button class = "btn btn-success" type ="submit">Submit</button>
     

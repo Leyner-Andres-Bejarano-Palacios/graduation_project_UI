@@ -10,5 +10,6 @@ export class Task {
 	machineLog: string;
     numRetries: number;
 	machineDescription: string;
+	requestedUrl: string;
 	isTest: number;
 }

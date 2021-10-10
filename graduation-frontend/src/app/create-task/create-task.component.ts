@@ -28,7 +28,7 @@ export class CreateTaskComponent implements OnInit {
   }
 
   goToTaskList(){
-    this.router.navigate(['/task']);
+    this.router.navigate(['/tasks']);
   }
   
   onSubmit(){
